@@ -17,6 +17,8 @@ See `README.md` for the public-facing overview.
 
 The low-tier model must never have to *deduce* anything. If a task requires product or design judgment, it is marked `[ALTO]` and is **not** low-tier work.
 
+**Start-of-session rule:** every session — any tier — reads this file first, before any other repository or internal document, and re-reads it whenever it changes. If a rule here contradicts what you observe, stop and ask the maintainer; never act on a stale rule.
+
 ## Safety invariants (non-negotiable for the entire project)
 
 1. **`P:\Photography\` is irreplaceable production data.** No code writes, moves, renames or deletes anything there until the explicit Phase 7 sign-off.
