@@ -22,10 +22,11 @@ The low-tier model must never have to *deduce* anything. If a task requires prod
 ## Safety invariants (non-negotiable for the entire project)
 
 1. **`P:\Photography\` is irreplaceable production data.** No code writes, moves, renames or deletes anything there until the explicit Phase 7 sign-off.
-2. **pCloud syncs:** a deletion in `P:` propagates to the cloud. All development and testing happens in the local sandbox `C:\FilmstripSandbox\`.
+2. **pCloud syncs:** a deletion in `P:` propagates to the cloud. All development and testing happens in the local sandbox — a folder named `Sandbox` inside the project folder (always quote its full path in commands: it contains spaces). **This repository is public: never write the absolute path of the sandbox here**; the maintainer provides the exact path in each task prompt. The sandbox must never be committed to the internal repo (`.gitignore` entry `Sandbox/`).
 3. **Every destructive operation has a mandatory dry-run** that produces a reviewable report before it is executed.
 4. **Never write inside an image file.** EXIF is read-only.
 5. **Never regenerate a sidecar from scratch.** Read-merge-write only.
+6. **Privacy — nothing personally identifiable goes public.** Never commit real names, personal email addresses, or absolute local paths (e.g. `C:\Users\...\`) to this repository, its PRs, commit messages or comments. Refer to local resources generically (e.g. "the project `Sandbox` folder"); concrete paths come from the maintainer's task prompt, never from a public file.
 
 ## Photo library rules (PRD v0.4)
 
