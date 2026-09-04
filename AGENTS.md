@@ -21,12 +21,12 @@ The low-tier model must never have to *deduce* anything. If a task requires prod
 
 ## Safety invariants (non-negotiable for the entire project)
 
-1. **`P:\Photography\` is irreplaceable production data.** No code writes, moves, renames or deletes anything there until the explicit Phase 7 sign-off.
-2. **pCloud syncs:** a deletion in `P:` propagates to the cloud. All development and testing happens in the local sandbox — a folder named `Sandbox` inside the project folder (always quote its full path in commands: it contains spaces). **This repository is public: never write the absolute path of the sandbox here**; the maintainer provides the exact path in each task prompt. The sandbox must never be committed to the internal repo (`.gitignore` entry `Sandbox/`).
+1. **The production library (`FILMSTRIP_LIBRARY_ROOT` env var) is irreplaceable production data.** No code writes, moves, renames or deletes anything there until the explicit Phase 7 sign-off. Resolve the path at runtime (`$env:FILMSTRIP_LIBRARY_ROOT`); if the variable is not defined in your shell, **stop and ask the maintainer** — never guess or hardcode it.
+2. **pCloud syncs:** a deletion in the production library propagates to the cloud. All development and testing happens in the local sandbox (`FILMSTRIP_SANDBOX_ROOT` env var — a folder named `Sandbox` inside the project folder; its path contains spaces, so always quote the resolved value in commands). Resolve it at runtime; if the variable is not defined in your shell, **stop and ask the maintainer** — never guess or hardcode it. **This repository is public: never write the resolved values of these variables here** — refer to them by name only. The sandbox must never be committed to the internal repo (`.gitignore` entry `Sandbox/`).
 3. **Every destructive operation has a mandatory dry-run** that produces a reviewable report before it is executed.
 4. **Never write inside an image file.** EXIF is read-only.
 5. **Never regenerate a sidecar from scratch.** Read-merge-write only.
-6. **Privacy — nothing personally identifiable goes public.** Never commit real names, personal email addresses, or absolute local paths (e.g. `C:\Users\...\`) to this repository, its PRs, commit messages or comments. Refer to local resources generically (e.g. "the project `Sandbox` folder"); concrete paths come from the maintainer's task prompt, never from a public file.
+6. **Privacy — nothing personally identifiable goes public.** Never commit real names, personal email addresses, or resolved local paths (e.g. the value of `FILMSTRIP_LIBRARY_ROOT` / `FILMSTRIP_SANDBOX_ROOT`, or any `C:\Users\...\` path) to this repository, its PRs, commit messages or comments — not even inside pasted command output. Refer to local resources by env-var name or generically (e.g. "the project `Sandbox` folder").
 
 ## Photo library rules (PRD v0.4)
 
