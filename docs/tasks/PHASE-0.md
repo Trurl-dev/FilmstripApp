@@ -40,9 +40,10 @@ Environment, governance, sandbox, audit. All tasks target milestone **M0**.
 - **Acceptance criteria:** one-page report in audits/ with the result and recommendation. This decides the delete design.
 - **DONE:** 2026-09-05
 
-### [ ] T-0.8 — Full library audit (read-only script)
+### [x] T-0.8 — Full library audit (read-only script)
 - **Goal:** Full library audit (read-only script).
 - **Acceptance criteria:** report answers how many photos, from which cameras, how many need renaming, how many edge cases.
+- **DONE:** 2026-09-05
 
 ### [x] T-0.9 — Apply approved PRD deltas → PRD v0.4
 - **Goal:** Apply approved PRD deltas → PRD v0.4.
