@@ -30,9 +30,10 @@ Environment, governance, sandbox, audit. All tasks target milestone **M0**.
 - **Acceptance criteria:** AGENTS.md ≤ 150 lines.
 - **DONE:** 2026-09-04
 
-### [ ] T-0.6 — Create the sandbox
+### [x] T-0.6 — Create the sandbox
 - **Goal:** Create the sandbox: copy session 26.08 Guatemala into $env:FILMSTRIP_SANDBOX_ROOT\library\ plus ~30 varied fixtures in $env:FILMSTRIP_SANDBOX_ROOT\fixtures\ with a README.
 - **Acceptance criteria:** file count matches the source; fixtures\README.md exists.
+- **DONE:** 2026-09-05
 
 ### [ ] T-0.7 — Empirically verify the recycle-bin semantics on the production library mount (PRD-8)
 - **Goal:** Empirically verify the recycle-bin semantics on the production library mount (PRD-8).
