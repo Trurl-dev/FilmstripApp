@@ -1,16 +1,16 @@
 # Project state
-_Last updated: 2026-09-05 by low-tier model in PR #5_
+_Last updated: 2026-09-05 by low-tier model in PR #6_
 
 ## Where we are
 Phase: 0 — Foundations (environment, governance, sandbox, audit)
 Milestone target: M0
-Current task: T-0.7 (recycle-bin semantics on the production library mount)
+Current task: T-0.8 (full library audit)
 Blocked: none
 
 ## Last 3 completed
+- T-0.7 Recycle-bin semantics on the production library mount — PR #6
 - T-0.6 Create the sandbox — verified
 - T-0.4 Governance & memory scaffolding — PR #4
-- T-0.3 Internal private repo — (internal repo, no PR)
 
 ## Never break these
 1. Never write to the production library (`FILMSTRIP_LIBRARY_ROOT` env var) —
