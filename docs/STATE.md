@@ -1,5 +1,5 @@
 # Project state
-_Last updated: 2026-09-05 by low-tier model in PR #PRNUMBER_
+_Last updated: 2026-09-05 by low-tier model in PR #5_
 
 ## Where we are
 Phase: 0 — Foundations (environment, governance, sandbox, audit)
