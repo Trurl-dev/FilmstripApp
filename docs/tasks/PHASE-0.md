@@ -35,9 +35,10 @@ Environment, governance, sandbox, audit. All tasks target milestone **M0**.
 - **Acceptance criteria:** file count matches the source; fixtures\README.md exists.
 - **DONE:** 2026-09-05
 
-### [ ] T-0.7 — Empirically verify the recycle-bin semantics on the production library mount (PRD-8)
+### [x] T-0.7 — Empirically verify the recycle-bin semantics on the production library mount (PRD-8)
 - **Goal:** Empirically verify the recycle-bin semantics on the production library mount (PRD-8).
 - **Acceptance criteria:** one-page report in audits/ with the result and recommendation. This decides the delete design.
+- **DONE:** 2026-09-05
 
 ### [ ] T-0.8 — Full library audit (read-only script)
 - **Goal:** Full library audit (read-only script).
