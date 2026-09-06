@@ -17,13 +17,14 @@ Environment, governance, sandbox, audit. All tasks target milestone **M0**.
 - **Acceptance criteria:** git log shows the commit; gh repo view lists it as private.
 - **DONE:** 2026-09-05
 
-### [ ] T-0.4 — Governance & memory scaffolding
+### [x] T-0.4 — Governance & memory scaffolding
 - **Milestone:** M0 · **Size:** M · **Model:** low
 - **Files:** docs/STATE.md, docs/ROADMAP.md, docs/tasks/PHASE-0.md,
             docs/adr/0000-template.md, .github/PULL_REQUEST_TEMPLATE.md
 - **Goal:** create the memory & governance scaffolding files.
 - **Acceptance criteria:** the files exist on a branch; a PR is open.
 - **Verify with:** git status shows the new files; gh pr view shows the PR open.
+- **DONE:** 2026-09-05 (PR #4 merged)
 
 ### [x] T-0.5 — Update AGENTS.md with the safety invariants, memory system, and "never edit the PRD" policy
 - **Goal:** Update AGENTS.md with the safety invariants, memory system, and "never edit the PRD" policy.
@@ -48,3 +49,9 @@ Environment, governance, sandbox, audit. All tasks target milestone **M0**.
 ### [x] T-0.9 — Apply approved PRD deltas → PRD v0.4
 - **Goal:** Apply approved PRD deltas → PRD v0.4.
 - **DONE:** 2026-09-04
+
+---
+
+**Phase closed: 2026-09-06 — all 9 tasks done, milestone M0 met** (close checklist run by a
+high-tier model; evidence in the PR that closed the phase). Next: Phase 1 — T-1.1 kickoff,
+which generates `docs/tasks/PHASE-1.md`.
