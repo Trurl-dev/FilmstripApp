@@ -9,11 +9,12 @@ A pnpm workspace with a green CI pipeline, without touching any photo data. All 
 - **Acceptance criteria:** `pnpm install` runs without errors (tested on 06/09: it works with the workspace folders empty — do NOT create filler package.json files in desktop/, packages/ or tools/).
 - **DONE:** 2026-09-06
 
-### [ ] T-1.2 — TypeScript base
+### [x] T-1.2 — TypeScript base
 - **Milestone:** M1 · **Size:** S
 - **Files:** tsconfig.base.json, tsconfig.json (root, extends base), package.json (root: only the typecheck script)
 - **Goal:** strict: true, noUncheckedIndexedAccess, exactOptionalPropertyTypes. Note: each package's tsconfig arrives with its package in T-1.3.
 - **Acceptance criteria:** `pnpm typecheck` is green.
+- **DONE:** 2026-09-06
 
 ### [ ] T-1.3 — packages/core (pure logic) and packages/shared (types/DTOs)
 - **Milestone:** M1 · **Size:** S
