@@ -16,11 +16,12 @@ A pnpm workspace with a green CI pipeline, without touching any photo data. All 
 - **Acceptance criteria:** `pnpm typecheck` is green.
 - **DONE:** 2026-09-06
 
-### [ ] T-1.3 — packages/core (pure logic) and packages/shared (types/DTOs)
+### [x] T-1.3 — packages/core (pure logic) and packages/shared (types/DTOs)
 - **Milestone:** M1 · **Size:** S
 - **Files:** packages/core/package.json + tsconfig.json + src/index.ts; packages/shared/ the same; package.json (root, references if needed)
 - **Goal:** core has no Electron imports; both export a test symbol.
 - **Acceptance criteria:** both compile and export the symbol.
+- **DONE:** 2026-09-06
 
 ### [ ] T-1.4 — Electron + Vite + React shell in desktop/
 - **Milestone:** M1 · **Size:** M
