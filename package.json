@@ -4,8 +4,8 @@
   "private": true,
   "description": "FilmstripApp monorepo — desktop app for managing and reviewing a personal photo archive",
   "scripts": {
-    "dev": "echo \"dev: wired up in T-1.4 (Electron + Vite + React shell)\"",
-    "build": "echo \"build: wired up in T-1.4 (Electron + Vite + React shell)\"",
+    "dev": "pnpm --filter @filmstrip/desktop dev",
+    "build": "pnpm --filter @filmstrip/desktop build",
     "lint": "echo \"lint: wired up in T-1.6 (ESLint + Prettier)\"",
     "typecheck": "tsc --noEmit && pnpm --filter \"@filmstrip/*\" typecheck",
     "test": "echo \"test: wired up in T-1.7 (Vitest)\"",
