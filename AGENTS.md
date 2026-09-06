@@ -61,7 +61,9 @@ The PRD, DESIGN, PLAN and DevLog are internal documents in Spanish, kept **outsi
 
 ## Repository state
 
-Early planning stage. Only governance files exist (`README.md`, `LICENSE`, `.gitignore`, `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `SECURITY.md`, this file). There is no code or `package.json` yet; the memory files (`docs/STATE.md`, `docs/tasks/`, `docs/adr/`) are created in Phase 0. When the first app scaffold lands, update this file with the real commands.
+Phase 0 (foundations) is complete — milestone M0. What exists today: the governance files (`README.md`, `LICENSE`, `.gitignore`, `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `SECURITY.md`, this file), the memory files (`docs/STATE.md`, `docs/ROADMAP.md`, `docs/tasks/`, `docs/adr/`) and `.github/PULL_REQUEST_TEMPLATE.md`.
+
+There is still **no application code and no `package.json`**: the commands listed in `docs/STATE.md` (`pnpm install`, `pnpm dev`, `pnpm lint && pnpm typecheck && pnpm test`) are the target for Phase 1, not commands that run today. The toolchain they need is installed on the maintainer's machine (ExifTool ≥ 12, pnpm). Phase 1 lands the monorepo scaffold and green CI; update this section and add the real commands when it does (T-1.9).
 
 ## Planned layout (monorepo)
 
@@ -89,7 +91,7 @@ Internal planning documents in Spanish (PRD, DESIGN, PLAN, DevLog, API research)
 
 ## Workflow when starting a task
 
-1. Read this file first, then `docs/STATE.md`, then only your assigned task card from `docs/tasks/PHASE-N.md`. (Until those files exist, read `README.md` and ask the maintainer.)
+1. Read this file first, then `docs/STATE.md`, then only your assigned task card from `docs/tasks/PHASE-N.md`. (The board for the current phase is generated at its kickoff; if it does not exist yet, ask the maintainer instead of guessing.)
 2. Check open issues/branches for existing work on the same topic.
 3. Create a short-lived branch named after the task (e.g. `feat/thumbnail-cache`).
 4. Implement in small commits; keep `main` always working.
