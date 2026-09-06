@@ -14,7 +14,13 @@ FilmstripApp is a desktop application for **managing and viewing a personal phot
 
 ## Status
 
-Early planning stage — no production code yet. Product requirements are being finalized.
+**Phase 0 (foundations) complete — milestone M0, 2026-09-06.** Product requirements are frozen at
+v0.4, the toolchain is installed, the governance and agent-memory files are in place, a sandbox
+holds a full copy of a real session for testing, and a read-only audit of the whole archive has
+been delivered (no write ever touches the real library).
+
+**No application code yet.** Next up: Phase 1 — monorepo scaffolding, Electron shell and green CI.
+See [docs/ROADMAP.md](docs/ROADMAP.md) and [docs/STATE.md](docs/STATE.md).
 
 ## Planned stack
 
@@ -32,7 +38,14 @@ Early planning stage — no production code yet. Product requirements are being 
 FilmstripApp/
 ├── README.md
 ├── LICENSE
-└── (app code — coming soon)
+├── AGENTS.md              Working conventions for AI agents
+├── docs/
+│   ├── STATE.md           Current phase, task and safety rules
+│   ├── ROADMAP.md         Phases 0-10 and their milestones
+│   ├── tasks/             Task board, one file per phase
+│   └── adr/               Architecture decision records
+├── .github/               Pull request template
+└── (app code — Phase 1)
 ```
 
 Internal planning documents (PRD, design notes, API research) are kept outside this public repository for now.
