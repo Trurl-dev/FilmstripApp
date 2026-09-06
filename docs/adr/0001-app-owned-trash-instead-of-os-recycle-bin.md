@@ -1,5 +1,5 @@
 # ADR-0001 — Deletes go to an app-owned trash folder, never to the OS recycle bin
-Date: 2026-09-06 · Status: Proposed
+Date: 2026-09-06 · Status: Accepted (2026-09-06, maintainer approval)
 
 ## Context
 

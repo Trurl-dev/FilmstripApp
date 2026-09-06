@@ -1,5 +1,5 @@
 # ADR-0002 — The indexer follows the observed library structure, not an assumed year/session tree
-Date: 2026-09-06 · Status: Proposed
+Date: 2026-09-06 · Status: Accepted (2026-09-06, maintainer approval)
 
 ## Context
 
