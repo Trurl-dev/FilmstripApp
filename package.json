@@ -1,0 +1,14 @@
+{
+  "name": "filmstrip",
+  "version": "0.0.0",
+  "private": true,
+  "description": "FilmstripApp monorepo — desktop app for managing and reviewing a personal photo archive",
+  "scripts": {
+    "dev": "echo \"dev: wired up in T-1.4 (Electron + Vite + React shell)\"",
+    "build": "echo \"build: wired up in T-1.4 (Electron + Vite + React shell)\"",
+    "lint": "echo \"lint: wired up in T-1.6 (ESLint + Prettier)\"",
+    "typecheck": "echo \"typecheck: wired up in T-1.2 (TypeScript base)\"",
+    "test": "echo \"test: wired up in T-1.7 (Vitest)\"",
+    "check": "pnpm lint && pnpm typecheck && pnpm test"
+  }
+}
