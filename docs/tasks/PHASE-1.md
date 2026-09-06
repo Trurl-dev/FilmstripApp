@@ -23,11 +23,12 @@ A pnpm workspace with a green CI pipeline, without touching any photo data. All 
 - **Acceptance criteria:** both compile and export the symbol.
 - **DONE:** 2026-09-06
 
-### [ ] T-1.4 — Electron + Vite + React shell in desktop/
+### [x] T-1.4 — Electron + Vite + React shell in desktop/
 - **Milestone:** M1 · **Size:** M
 - **Files:** desktop/package.json, desktop/electron/main.ts, desktop/electron/preload.ts, desktop/src/ (renderer), desktop/index.html, desktop/vite.config.ts, desktop tsconfig, package.json (root: only the dev/build scripts)
 - **Goal:** main process, preload with contextIsolation: true, React renderer.
 - **Acceptance criteria:** `pnpm dev` opens a window titled "Filmstrip".
+- **DONE:** 2026-09-06
 
 ### [ ] T-1.5 — Typed IPC bridge
 - **Milestone:** M1 · **Size:** M
