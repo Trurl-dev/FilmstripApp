@@ -7,7 +7,7 @@
     "dev": "echo \"dev: wired up in T-1.4 (Electron + Vite + React shell)\"",
     "build": "echo \"build: wired up in T-1.4 (Electron + Vite + React shell)\"",
     "lint": "echo \"lint: wired up in T-1.6 (ESLint + Prettier)\"",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "tsc --noEmit && pnpm --filter \"@filmstrip/*\" typecheck",
     "test": "echo \"test: wired up in T-1.7 (Vitest)\"",
     "check": "pnpm lint && pnpm typecheck && pnpm test"
   },

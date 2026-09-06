@@ -1,16 +1,16 @@
 # Project state
-_Last updated: 2026-09-06 by low-tier model in PR #11_
+_Last updated: 2026-09-06 by low-tier model in PR #12_
 
 ## Where we are
 Phase: 1 — Monorepo scaffolding and CI (in progress)
 Milestone target: M1
-Current task: T-1.3 — packages/core (pure logic) + packages/shared (types/DTOs)
+Current task: T-1.4 — Electron + Vite + React shell in desktop/
 Blocked: none
 
 ## Last 3 completed
+- T-1.3 packages/core + packages/shared — PR #12
 - T-1.2 TypeScript base — PR #11
 - T-1.1 Phase 1 kickoff + pnpm workspace — PR #10
-- Phase 0 close — checklist §5.2.e, milestone M0 — PR #8
 
 ## Never break these
 1. Never write to the production library (`FILMSTRIP_LIBRARY_ROOT` env var) —
@@ -25,7 +25,7 @@ Blocked: none
 6. Every destructive op needs a dry-run report first.
 
 ## Commands
-install: pnpm install · typecheck: pnpm typecheck (green since T-1.2) · dev/build: wired by T-1.4 · lint: wired by T-1.6 · test: wired by T-1.7 · check: pnpm lint && pnpm typecheck && pnpm test (full chain green at T-1.9)
+install: pnpm install · typecheck: pnpm typecheck (green since T-1.2; covers all workspace packages since T-1.3) · dev/build: wired by T-1.4 · lint: wired by T-1.6 · test: wired by T-1.7 · check: pnpm lint && pnpm typecheck && pnpm test (full chain green at T-1.9)
 
 ## Where to look
 Product rules → ask the maintainer (private PRD, not in this repo)

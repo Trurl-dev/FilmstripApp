@@ -12,6 +12,10 @@ importers:
         specifier: ^7.0.2
         version: 7.0.2
 
+  packages/core: {}
+
+  packages/shared: {}
+
 packages:
 
   '@typescript/typescript-aix-ppc64@7.0.2':
