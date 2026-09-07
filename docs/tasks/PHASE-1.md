@@ -58,11 +58,12 @@ A pnpm workspace with a green CI pipeline, without touching any photo data. All 
 - **Acceptance criteria:** `pnpm test` is green with ≥ 1 non-trivial test.
 - **DONE:** 2026-09-07
 
-### [ ] T-1.8 — GitHub Actions CI
+### [x] T-1.8 — GitHub Actions CI
 - **Milestone:** M1 · **Size:** M
 - **Files:** .github/workflows/ci.yml
 - **Goal:** on every PR, install → lint → typecheck → test on windows-latest.
 - **Acceptance criteria:** a PR shows the check green (this same PR serves once the workflow exists on the branch). Note: if the workflow cannot run on this PR because it is added in it, declare it in the Handoff and leave the AC for T-1.8, which will demonstrate it with its own PR.
+- **DONE:** 2026-09-07
 
 ### [ ] T-1.9 — main protection + CODEOWNERS + real commands
 - **Milestone:** M1 · **Size:** M
