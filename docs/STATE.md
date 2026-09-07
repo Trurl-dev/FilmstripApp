@@ -1,16 +1,18 @@
 # Project state
-_Last updated: 2026-09-07 by low-tier model in PR #18_
+_Last updated: 2026-09-07 by low-tier model in PR #19_
 
 ## Where we are
-Phase: 1 — Monorepo scaffolding and CI (in progress)
+Phase: 1 — Monorepo scaffolding and CI (board complete; awaiting the Phase 1 close / milestone M1 review)
 Milestone target: M1
-Current task: T-1.9 — main protection + CODEOWNERS + real commands
+Current task: none in flight — next step is the Phase 1 close review (milestone M1), by the maintainer / high-tier model
 Blocked: none
 
+`main` is protected since T-1.9: changes land only through pull requests with the `ci` check green and one approving review; administrators are included, force pushes are blocked.
+
 ## Last 3 completed
+- T-1.9 main protection + CODEOWNERS + real commands — PR #19
 - T-1.8 GitHub Actions CI — PR #18
 - T-1.7 Vitest + first real test — PR #17
-- T-1.6 ESLint + Prettier — PR #16
 
 ## Never break these
 1. Never write to the production library (`FILMSTRIP_LIBRARY_ROOT` env var) —
