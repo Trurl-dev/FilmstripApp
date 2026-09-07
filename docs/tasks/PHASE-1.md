@@ -37,11 +37,12 @@ A pnpm workspace with a green CI pipeline, without touching any photo data. All 
 - **Acceptance criteria:** the renderer calls app.getVersion() through the bridge and renders it. Rule: the renderer never touches fs directly.
 - **DONE:** 2026-09-07
 
-### [ ] T-1.5b — App logger (PLAN §6.3)
+### [x] T-1.5b — App logger (PLAN §6.3)
 - **Milestone:** M1 · **Size:** M
 - **Files:** packages/core/src/log.ts, desktop/electron/main.ts (wiring), logger test
 - **Goal:** JSONL, levels, 14-day / 50 MB rotation, in <root>\.filmstrip\logs\ with the root resolved by configuration at runtime, never hardcoded. RULE (invariant 1): the AC is demonstrated with the app pointing at $env:FILMSTRIP_SANDBOX_ROOT — logs go to Sandbox\.filmstrip\logs\, NEVER to the production library.
 - **Acceptance criteria:** starting the app creates the day's file with ≥ 1 info event.
+- **DONE:** 2026-09-07
 
 ### [ ] T-1.6 — ESLint + Prettier
 - **Milestone:** M1 · **Size:** S
