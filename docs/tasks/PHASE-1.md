@@ -51,11 +51,12 @@ A pnpm workspace with a green CI pipeline, without touching any photo data. All 
 - **Acceptance criteria:** `pnpm lint` is green over the whole repo.
 - **DONE:** 2026-09-07
 
-### [ ] T-1.7 — Vitest + first real test
+### [x] T-1.7 — Vitest + first real test
 - **Milestone:** M1 · **Size:** S
 - **Files:** vitest.config.ts (root), packages/core/test/<first test>.test.ts, package.json (root: only the test script)
 - **Goal:** Vitest configured with a first real test.
 - **Acceptance criteria:** `pnpm test` is green with ≥ 1 non-trivial test.
+- **DONE:** 2026-09-07
 
 ### [ ] T-1.8 — GitHub Actions CI
 - **Milestone:** M1 · **Size:** M
