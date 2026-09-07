@@ -2,13 +2,7 @@ import { describe, expect, it } from "vitest";
 import { mkdtempSync, readFileSync, rmSync, existsSync, readdirSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
-import {
-  createLogger,
-  formatEntry,
-  logFilePath,
-  logsDir,
-  type LogEntry
-} from "../src/log";
+import { createLogger, formatEntry, logFilePath, logsDir, type LogEntry } from "../src/log";
 
 function tempRoot(): string {
   return mkdtempSync(join(tmpdir(), "filmstrip-log-test-"));
@@ -41,14 +35,14 @@ describe("app logger", () => {
       ts: "2026-09-07T00:00:00.000Z",
       level: "warn",
       scope: "main",
-      msg: "something"
+      msg: "something",
     });
     const parsed = JSON.parse(line) as Record<string, unknown>;
     expect(parsed).toEqual({
       ts: "2026-09-07T00:00:00.000Z",
       level: "warn",
       scope: "main",
-      msg: "something"
+      msg: "something",
     });
     expect(line.endsWith("\n")).toBe(false);
   });

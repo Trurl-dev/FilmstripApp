@@ -32,8 +32,8 @@ function createWindow(): void {
       preload: join(__dirname, "../preload/preload.mjs"),
       contextIsolation: true,
       nodeIntegration: false,
-      sandbox: false
-    }
+      sandbox: false,
+    },
   });
 
   if (process.env["ELECTRON_RENDERER_URL"]) {
@@ -53,7 +53,7 @@ function createWindow(): void {
   });
 }
 
-app.whenReady().then(() => {
+void app.whenReady().then(() => {
   logger = createLogger({ rootDir: resolveAppRoot(), scope: "main" });
   logger.info("app started", { version: app.getVersion() });
   registerIpcHandlers();

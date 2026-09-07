@@ -1,11 +1,4 @@
-import {
-  appendFileSync,
-  existsSync,
-  mkdirSync,
-  readdirSync,
-  statSync,
-  unlinkSync
-} from "node:fs";
+import { appendFileSync, existsSync, mkdirSync, readdirSync, statSync, unlinkSync } from "node:fs";
 import { join } from "node:path";
 
 export type LogLevel = "error" | "warn" | "info" | "debug";
@@ -56,7 +49,7 @@ export function formatEntry(entry: LogEntry): string {
     ts: entry.ts,
     level: entry.level,
     scope: entry.scope,
-    msg: entry.msg
+    msg: entry.msg,
   };
   if (entry.data !== undefined) {
     line.data = entry.data;
@@ -125,7 +118,7 @@ export function createLogger(options: LoggerOptions): Logger {
       ts: new Date().toISOString(),
       level,
       scope,
-      msg
+      msg,
     };
     if (data !== undefined) {
       entry.data = data;
@@ -137,6 +130,6 @@ export function createLogger(options: LoggerOptions): Logger {
     error: (msg, data) => write("error", msg, data),
     warn: (msg, data) => write("warn", msg, data),
     info: (msg, data) => write("info", msg, data),
-    debug: (msg, data) => write("debug", msg, data)
+    debug: (msg, data) => write("debug", msg, data),
   };
 }

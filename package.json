@@ -6,12 +6,21 @@
   "scripts": {
     "dev": "pnpm --filter @filmstrip/desktop dev",
     "build": "pnpm --filter @filmstrip/desktop build",
-    "lint": "echo \"lint: wired up in T-1.6 (ESLint + Prettier)\"",
+    "lint": "eslint . && prettier --check \"desktop/**/*.{ts,tsx}\" \"packages/**/*.{ts,tsx}\" \"*.json\" \"desktop/*.json\" \"packages/*/*.json\"",
     "typecheck": "tsc --noEmit && pnpm --filter \"@filmstrip/*\" typecheck",
     "test": "echo \"test: wired up in T-1.7 (Vitest)\"",
     "check": "pnpm lint && pnpm typecheck && pnpm test"
   },
   "devDependencies": {
-    "typescript": "^7.0.2"
+    "@eslint/js": "^9.39.5",
+    "eslint": "^9.39.5",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "prettier": "^3.9.6",
+    "typescript": "npm:@typescript/typescript6@^6.0.2",
+    "typescript-eslint": "^8.69.0",
+    "typescript7": "npm:typescript@^7.0.2",
+    "vitest": "^5.0.0"
   }
 }
