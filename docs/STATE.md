@@ -1,16 +1,16 @@
 # Project state
-_Last updated: 2026-09-07 by low-tier model in PR #14_
+_Last updated: 2026-09-07 by low-tier model in PR #15_
 
 ## Where we are
 Phase: 1 — Monorepo scaffolding and CI (in progress)
 Milestone target: M1
-Current task: T-1.5b — App logger (PLAN §6.3)
+Current task: T-1.6 — ESLint + Prettier
 Blocked: none
 
 ## Last 3 completed
+- T-1.5b App logger — PR #15
 - T-1.5 Typed IPC bridge — PR #14
 - T-1.4 Electron + Vite + React shell — PR #13
-- T-1.3 packages/core + packages/shared — PR #12
 
 ## Never break these
 1. Never write to the production library (`FILMSTRIP_LIBRARY_ROOT` env var) —

@@ -1,6 +1,23 @@
 import { app, BrowserWindow, ipcMain } from "electron";
 import { join } from "node:path";
 import { IPC_CHANNELS } from "@filmstrip/shared";
+import { createLogger, type Logger } from "@filmstrip/core";
+
+let logger: Logger;
+
+function resolveAppRoot(): string {
+  const sandbox = process.env["FILMSTRIP_SANDBOX_ROOT"];
+  if (sandbox) {
+    return sandbox;
+  }
+  const library = process.env["FILMSTRIP_LIBRARY_ROOT"];
+  if (library) {
+    return library;
+  }
+  throw new Error(
+    "Neither FILMSTRIP_SANDBOX_ROOT nor FILMSTRIP_LIBRARY_ROOT is defined — refusing to guess the app root."
+  );
+}
 
 function registerIpcHandlers(): void {
   ipcMain.handle(IPC_CHANNELS.appGetVersion, () => app.getVersion());
@@ -37,6 +54,8 @@ function createWindow(): void {
 }
 
 app.whenReady().then(() => {
+  logger = createLogger({ rootDir: resolveAppRoot(), scope: "main" });
+  logger.info("app started", { version: app.getVersion() });
   registerIpcHandlers();
   createWindow();
 
