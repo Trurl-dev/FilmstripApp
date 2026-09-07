@@ -1,16 +1,16 @@
 # Project state
-_Last updated: 2026-09-07 by low-tier model in PR #17_
+_Last updated: 2026-09-07 by low-tier model in PR #18_
 
 ## Where we are
 Phase: 1 — Monorepo scaffolding and CI (in progress)
 Milestone target: M1
-Current task: T-1.8 — GitHub Actions CI
+Current task: T-1.9 — main protection + CODEOWNERS + real commands
 Blocked: none
 
 ## Last 3 completed
+- T-1.8 GitHub Actions CI — PR #18
 - T-1.7 Vitest + first real test — PR #17
 - T-1.6 ESLint + Prettier — PR #16
-- T-1.5b App logger — PR #15
 
 ## Never break these
 1. Never write to the production library (`FILMSTRIP_LIBRARY_ROOT` env var) —
@@ -25,7 +25,7 @@ Blocked: none
 6. Every destructive op needs a dry-run report first.
 
 ## Commands
-install: pnpm install · dev: pnpm dev (opens the Electron shell since T-1.4) · build: pnpm build (since T-1.4) · typecheck: pnpm typecheck (green since T-1.2; covers all workspace packages since T-1.3) · lint: pnpm lint (green since T-1.6; ESLint + Prettier) · test: pnpm test (green since T-1.7; Vitest) · check: pnpm lint && pnpm typecheck && pnpm test (full chain green at T-1.9)
+install: pnpm install · dev: pnpm dev (opens the Electron shell since T-1.4) · build: pnpm build (since T-1.4) · typecheck: pnpm typecheck (green since T-1.2; covers all workspace packages since T-1.3) · lint: pnpm lint (green since T-1.6; ESLint + Prettier) · test: pnpm test (green since T-1.7; Vitest) · check: pnpm lint && pnpm typecheck && pnpm test (green since T-1.7; CI runs it on every PR since T-1.8)
 
 ## Where to look
 Product rules → ask the maintainer (private PRD, not in this repo)
