@@ -4,7 +4,7 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   main: {
-    plugins: [externalizeDepsPlugin()],
+    plugins: [externalizeDepsPlugin({ exclude: ["@filmstrip/shared"] })],
     build: {
       rollupOptions: {
         input: resolve(__dirname, "electron/main.ts")
@@ -12,7 +12,7 @@ export default defineConfig({
     }
   },
   preload: {
-    plugins: [externalizeDepsPlugin()],
+    plugins: [externalizeDepsPlugin({ exclude: ["@filmstrip/shared"] })],
     build: {
       rollupOptions: {
         input: resolve(__dirname, "electron/preload.ts")

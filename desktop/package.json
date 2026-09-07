@@ -21,6 +21,7 @@
     "vite": "^7.3.6"
   },
   "dependencies": {
+    "@filmstrip/shared": "workspace:*",
     "react": "^19.2.8",
     "react-dom": "^19.2.8"
   }

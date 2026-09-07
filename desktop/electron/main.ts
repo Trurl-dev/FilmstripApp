@@ -1,5 +1,10 @@
-import { app, BrowserWindow } from "electron";
+import { app, BrowserWindow, ipcMain } from "electron";
 import { join } from "node:path";
+import { IPC_CHANNELS } from "@filmstrip/shared";
+
+function registerIpcHandlers(): void {
+  ipcMain.handle(IPC_CHANNELS.appGetVersion, () => app.getVersion());
+}
 
 function createWindow(): void {
   const mainWindow = new BrowserWindow({
@@ -7,7 +12,7 @@ function createWindow(): void {
     width: 1200,
     height: 800,
     webPreferences: {
-      preload: join(__dirname, "../preload/index.js"),
+      preload: join(__dirname, "../preload/preload.mjs"),
       contextIsolation: true,
       nodeIntegration: false,
       sandbox: false
@@ -32,6 +37,7 @@ function createWindow(): void {
 }
 
 app.whenReady().then(() => {
+  registerIpcHandlers();
   createWindow();
 
   app.on("activate", () => {

@@ -30,11 +30,12 @@ A pnpm workspace with a green CI pipeline, without touching any photo data. All 
 - **Acceptance criteria:** `pnpm dev` opens a window titled "Filmstrip".
 - **DONE:** 2026-09-06
 
-### [ ] T-1.5 — Typed IPC bridge
+### [x] T-1.5 — Typed IPC bridge
 - **Milestone:** M1 · **Size:** M
 - **Files:** packages/shared/src/ipc.ts (contract), desktop/electron/main.ts, desktop/electron/preload.ts, desktop/src/
 - **Goal:** a single channel with a TS contract in packages/shared.
 - **Acceptance criteria:** the renderer calls app.getVersion() through the bridge and renders it. Rule: the renderer never touches fs directly.
+- **DONE:** 2026-09-07
 
 ### [ ] T-1.5b — App logger (PLAN §6.3)
 - **Milestone:** M1 · **Size:** M
