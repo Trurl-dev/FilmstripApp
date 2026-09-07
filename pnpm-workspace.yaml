@@ -2,3 +2,7 @@ packages:
   - desktop
   - packages/*
   - tools/
+allowBuilds:
+  esbuild: true
+  electron: true
+  "@swc/core": true
