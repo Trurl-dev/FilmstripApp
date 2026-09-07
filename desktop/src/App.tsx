@@ -30,7 +30,7 @@ export function App(): React.JSX.Element {
       <p>Electron + Vite + React shell is running.</p>
       <p>
         App version via IPC bridge:{" "}
-        {error ? <strong style={{ color: "red" }}>{error}</strong> : version ?? "loading…"}
+        {error ? <strong style={{ color: "red" }}>{error}</strong> : (version ?? "loading…")}
       </p>
     </main>
   );

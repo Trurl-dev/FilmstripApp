@@ -44,11 +44,12 @@ A pnpm workspace with a green CI pipeline, without touching any photo data. All 
 - **Acceptance criteria:** starting the app creates the day's file with ≥ 1 info event.
 - **DONE:** 2026-09-07
 
-### [ ] T-1.6 — ESLint + Prettier
+### [x] T-1.6 — ESLint + Prettier
 - **Milestone:** M1 · **Size:** S
-- **Files:** eslint.config.js (flat config, strict TS, no-floating-promises), .prettierrc.json, .prettierignore, package.json (root: only the lint script)
+- **Files:** eslint.config.mjs (flat config, strict TS, no-floating-promises), .prettierrc.json, .prettierignore, package.json (root: only the lint script)
 - **Goal:** ESLint + Prettier configured.
 - **Acceptance criteria:** `pnpm lint` is green over the whole repo.
+- **DONE:** 2026-09-07
 
 ### [ ] T-1.7 — Vitest + first real test
 - **Milestone:** M1 · **Size:** S

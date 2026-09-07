@@ -7,25 +7,25 @@ export default defineConfig({
     plugins: [externalizeDepsPlugin({ exclude: ["@filmstrip/shared", "@filmstrip/core"] })],
     build: {
       rollupOptions: {
-        input: resolve(__dirname, "electron/main.ts")
-      }
-    }
+        input: resolve(__dirname, "electron/main.ts"),
+      },
+    },
   },
   preload: {
     plugins: [externalizeDepsPlugin({ exclude: ["@filmstrip/shared", "@filmstrip/core"] })],
     build: {
       rollupOptions: {
-        input: resolve(__dirname, "electron/preload.ts")
-      }
-    }
+        input: resolve(__dirname, "electron/preload.ts"),
+      },
+    },
   },
   renderer: {
     root: ".",
     plugins: [react()],
     build: {
       rollupOptions: {
-        input: resolve(__dirname, "index.html")
-      }
-    }
-  }
+        input: resolve(__dirname, "index.html"),
+      },
+    },
+  },
 });
