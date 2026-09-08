@@ -18,8 +18,8 @@ FilmstripApp is a desktop application for **managing and viewing a personal phot
 is now a pnpm workspace with an Electron + Vite + React desktop shell (`desktop/`), a pure-logic
 package (`packages/core`) and a shared types package (`packages/shared`), a typed IPC bridge,
 ESLint + Prettier, Vitest, and GitHub Actions CI that runs lint + typecheck + test on every pull
-request. Phase 0 (foundations, milestone M0) had been completed on 2026-09-06; milestone M1
-(Phase 1) is pending its close review.
+request. Phase 0 (foundations, milestone M0) was completed on 2026-09-06; Phase 1 closed with
+milestone M1 on 2026-09-08. Next up: Phase 2 — the headless data core.
 
 **No photo data is touched yet.** Development happens in the project `Sandbox` folder; the
 production library is off-limits until the explicit Phase 7 sign-off.

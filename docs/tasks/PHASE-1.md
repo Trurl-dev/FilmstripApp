@@ -71,3 +71,9 @@ A pnpm workspace with a green CI pipeline, without touching any photo data. All 
 - **Goal:** require PRs and green checks before merge; AGENTS.md and README with the real commands (AGENTS.md itself announces this update in T-1.9).
 - **Acceptance criteria:** a direct push to main is rejected (demonstrate with the literal output of the attempt and leave local main restored, or with gh api showing the protection active).
 - **DONE:** 2026-09-07
+
+---
+
+**Phase closed: 2026-09-08 — all 10 tasks done, milestone M1 met** (close checklist run by a
+high-tier model; evidence in the PR that closed the phase). Next: Phase 2 — kickoff, which
+generates `docs/tasks/PHASE-2.md` and starts T-2.1 (LibraryStorage contract).
