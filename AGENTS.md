@@ -61,9 +61,11 @@ The PRD, DESIGN, PLAN and DevLog are internal documents in Spanish, kept **outsi
 
 ## Repository state
 
-Phase 0 (foundations) is complete — milestone M0. What exists today: the governance files (`README.md`, `LICENSE`, `.gitignore`, `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `SECURITY.md`, this file), the memory files (`docs/STATE.md`, `docs/ROADMAP.md`, `docs/tasks/`, `docs/adr/`) and `.github/PULL_REQUEST_TEMPLATE.md`.
+Phase 0 (foundations) is complete — milestone M0. Phase 1 (monorepo scaffold, Electron shell, green CI) is complete as well, with milestone M1 pending its close review. What exists today: the governance files (`README.md`, `LICENSE`, `.gitignore`, `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `SECURITY.md`, this file), the memory files (`docs/STATE.md`, `docs/ROADMAP.md`, `docs/tasks/`, `docs/adr/`), the pull-request template, and the Phase 1 code: a pnpm workspace made of the root `package.json`, the `desktop/` Electron + Vite + React shell, `packages/core`, `packages/shared`, and the CI workflow in `.github/workflows/ci.yml`. `.github/CODEOWNERS` names the maintainer as the default reviewer.
 
-There is still **no application code and no `package.json`**: the commands listed in `docs/STATE.md` (`pnpm install`, `pnpm dev`, `pnpm lint && pnpm typecheck && pnpm test`) are the target for Phase 1, not commands that run today. The toolchain they need is installed on the maintainer's machine (ExifTool ≥ 12, pnpm). Phase 1 lands the monorepo scaffold and green CI; update this section and add the real commands when it does (T-1.9).
+The commands in `docs/STATE.md` are the real ones and run from the repository root: `pnpm install` sets up the workspace, `pnpm dev` opens the Electron shell, `pnpm build` builds the desktop app, `pnpm lint`, `pnpm typecheck` and `pnpm test` run the respective checks, and `pnpm check` runs lint + typecheck + test — exactly what CI runs on every pull request. ExifTool ≥ 12 is only needed by the phases that touch photo metadata, not by these commands.
+
+Since T-1.9, `main` is protected: every change lands through a pull request with the `ci` check green and one approving review; direct pushes to `main` are rejected by GitHub.
 
 ## Planned layout (monorepo)
 

@@ -65,8 +65,9 @@ A pnpm workspace with a green CI pipeline, without touching any photo data. All 
 - **Acceptance criteria:** a PR shows the check green (this same PR serves once the workflow exists on the branch). Note: if the workflow cannot run on this PR because it is added in it, declare it in the Handoff and leave the AC for T-1.8, which will demonstrate it with its own PR.
 - **DONE:** 2026-09-07
 
-### [ ] T-1.9 — main protection + CODEOWNERS + real commands
+### [x] T-1.9 — main protection + CODEOWNERS + real commands
 - **Milestone:** M1 · **Size:** M
 - **Files:** .github/CODEOWNERS, package.json if applicable, AGENTS.md, README.md; protection via gh api
 - **Goal:** require PRs and green checks before merge; AGENTS.md and README with the real commands (AGENTS.md itself announces this update in T-1.9).
 - **Acceptance criteria:** a direct push to main is rejected (demonstrate with the literal output of the attempt and leave local main restored, or with gh api showing the protection active).
+- **DONE:** 2026-09-07
